@@ -42,9 +42,12 @@ import Error404 from "../views/Authentication/Error404/Error404";
 import Error503 from "../views/Authentication/Error503/Error503";
 import ChatPopup from "../views/ChatPopup/DirectMessage";
 import ChatBot from "../views/ChatPopup/ChatBot";
+import SignUpStep1 from "../views/SignUp/SignUpStep1";
 import SignUpStep2 from "../views/Authentication/SignUp/SignUpStep2";
 import SignUpStep3 from "../views/Authentication/SignUp/SignUpStep3";
-
+import SignUpStep4 from "../views/Authentication/SignUp/SignUp4";
+import SignUpStep5 from "../views/Authentication/SignUp/SignUp5";
+import SignUpStep6 from "../views/Authentication/SignUp/SignUp6";
 
 export const routes = [
 
@@ -107,5 +110,8 @@ export const authRoutes = [
     { path: '/reset-password', exact: true, component: ResetPassword },
     { path: '/error-503', exact: true, component: Error503 },
 
+    { path: '/SugnUpStep4', exact: true, component: SignUpStep4 },
+    { path: '/SugnUpStep5', exact: true, component: SignUpStep5 },
+    { path: '/SugnUpStep6', exact: true, component: SignUpStep6 },
 
 ]

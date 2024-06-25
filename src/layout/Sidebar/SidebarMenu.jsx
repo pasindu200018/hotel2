@@ -282,6 +282,18 @@ export const SidebarMenu = [
                                 name: 'Signup Classic',
                                 path: '/auth/signup-classic',
                             },
+                            {
+                                name: 'SugnUpStep4',
+                                path: '/auth/SugnUpStep4',
+                            },
+                            {
+                                name: 'SugnUpStep5',
+                                path: '/auth/SugnUpStep5',
+                            },
+                            {
+                                name: 'SugnUpStep6',
+                                path: '/auth/SugnUpStep6',
+                            },
                         ]
                     },
                     {
