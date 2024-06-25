@@ -6,6 +6,8 @@ import {
   Card,
   Col,
   Container,
+  Dropdown,
+  DropdownButton,
   Form,
   InputGroup,
   Row,
@@ -20,7 +22,7 @@ import signupBg from "../../../../assets/img/signup-bg.jpg";
 import slide1 from "../../../../assets/img/slide1.jpg";
 import slide2 from "../../../../assets/img/slide2.jpg";
 
-const Signup = (props) => {
+const SignUpStep2 = (props) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -56,54 +58,64 @@ const Signup = (props) => {
                 <Form className="w-100">
                   <Row>
                     <Col xxl={5} xl={7} lg={10} className="mx-auto">
-                      <h4 className=" mb-4 fw-bold">Create your Parnter account</h4>
+                      <h4 className=" mb-4 fw-bold">
+                        Authorized person contact details
+                      </h4>
                       <h6 className=" mb-4">
-                        Create an account to list and manage your property.
+                        Your full name and phone number are needed to ensure the
+                        security of your liveinhotels account.
                       </h6>
-                      <Form.Label>Email</Form.Label>
-                      <Form.Control
-                        placeholder="Enter your email id"
-                        type="text"
-                      />
-                      <Form.Check id="logged_in" className="form-check-sm mt-3">
-                        <Form.Check.Input
-                          type="checkbox"
-                          className="bg-dark"
-                          defaultChecked
-                        />
-                        <Form.Check.Label className="text-muted fs-7 text-dark">
-                          By creating an account you specify that you have read
-                          and agree with our <Link to="#">Tearms of use</Link>{" "}
-                          and <Link to="#">Privacy policy</Link>. We may keep
-                          you inform about latest updates through our default{" "}
-                          <Link to="#">notification settings</Link>
-                        </Form.Check.Label>
-                      </Form.Check>
+                      <Row>
+                        <Col sm={6}>
+                          <Form.Label>First name</Form.Label>
+                          <Form.Control
+                            placeholder="Enter your first name"
+                            type="text"
+                          />
+                        </Col>
+                        <Col sm={6}>
+                          <Form.Label>Last name</Form.Label>
+                          <Form.Control
+                            placeholder="Enter your last name"
+                            type="text"
+                          />
+                        </Col>
+                        <Form.Label className="mt-3">Phone number</Form.Label>
+                        <InputGroup className="mb-3">
+                          <DropdownButton
+                            variant="outline-secondary"
+                            title="+94"
+                            id="input-group-dropdown-1"
+                          >
+                            <Dropdown.Item href="#">Action</Dropdown.Item>
+                            <Dropdown.Item href="#">
+                              Another action
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#">
+                              Something else here
+                            </Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item href="#">
+                              Separated link
+                            </Dropdown.Item>
+                          </DropdownButton>
+                          <Form.Control aria-label="Text input with dropdown button" 
+                          placeholder="00 0000 000"/>
+                        </InputGroup>
+                      </Row>
+                      <p>{`We'll text a two-factor authentication code to this number when you sign in`}</p>
+                     
 
                       <Button
                         variant="dark"
                         className="btn-rounded btn-uppercase btn-block mt-4"
                         as={Link}
-                        to="/auth/signup-step-2"
-                        
+                        to="/auth/signup-step-3"
                       >
-                        Continue
+                        Next
                       </Button>
 
-                      <div className="title-sm title-wth-divider divider-center my-4"></div>
-                      <p className="text-dark">
-                        Do you have questions about your property or the
-                        extranet? Visit Partner Help or ask another question on
-                        the patner Community
-                      </p>
-                      <Button
-                        variant="outline-dark"
-                        className="btn-outline btn-rounded  btn-block my-5"
-                        as={Link}
-                        to="login"
-                      >
-                        Sign in
-                      </Button>
+                      
                     </Col>
                   </Row>
                 </Form>
@@ -118,4 +130,4 @@ const Signup = (props) => {
   );
 };
 
-export default Signup;
+export default SignUpStep2;

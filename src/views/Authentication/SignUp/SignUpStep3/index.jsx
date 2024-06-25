@@ -20,7 +20,7 @@ import signupBg from "../../../../assets/img/signup-bg.jpg";
 import slide1 from "../../../../assets/img/slide1.jpg";
 import slide2 from "../../../../assets/img/slide2.jpg";
 
-const Signup = (props) => {
+const SignUpStep3 = (props) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -56,53 +56,29 @@ const Signup = (props) => {
                 <Form className="w-100">
                   <Row>
                     <Col xxl={5} xl={7} lg={10} className="mx-auto">
-                      <h4 className=" mb-4 fw-bold">Create your Parnter account</h4>
+                      <h4 className=" mb-4 fw-bold">Create password</h4>
                       <h6 className=" mb-4">
-                        Create an account to list and manage your property.
+                        Use a minimum of 10 characters, including uppercare
+                        letters, lowercase letters and numbers.
                       </h6>
-                      <Form.Label>Email</Form.Label>
+                      <Form.Label>Password</Form.Label>
                       <Form.Control
-                        placeholder="Enter your email id"
-                        type="text"
+                        placeholder="Enter your password"
+                        type="password"
                       />
-                      <Form.Check id="logged_in" className="form-check-sm mt-3">
-                        <Form.Check.Input
-                          type="checkbox"
-                          className="bg-dark"
-                          defaultChecked
-                        />
-                        <Form.Check.Label className="text-muted fs-7 text-dark">
-                          By creating an account you specify that you have read
-                          and agree with our <Link to="#">Tearms of use</Link>{" "}
-                          and <Link to="#">Privacy policy</Link>. We may keep
-                          you inform about latest updates through our default{" "}
-                          <Link to="#">notification settings</Link>
-                        </Form.Check.Label>
-                      </Form.Check>
+                      <Form.Label className="mt-4">Confirm password</Form.Label>
+                      <Form.Control
+                        placeholder="Confirm your password"
+                        type="password"
+                      />
 
                       <Button
                         variant="dark"
-                        className="btn-rounded btn-uppercase btn-block mt-4"
-                        as={Link}
-                        to="/auth/signup-step-2"
-                        
-                      >
-                        Continue
-                      </Button>
-
-                      <div className="title-sm title-wth-divider divider-center my-4"></div>
-                      <p className="text-dark">
-                        Do you have questions about your property or the
-                        extranet? Visit Partner Help or ask another question on
-                        the patner Community
-                      </p>
-                      <Button
-                        variant="outline-dark"
-                        className="btn-outline btn-rounded  btn-block my-5"
+                        className="btn-rounded  btn-block mt-4"
                         as={Link}
                         to="login"
                       >
-                        Sign in
+                        Create account
                       </Button>
                     </Col>
                   </Row>
@@ -118,4 +94,4 @@ const Signup = (props) => {
   );
 };
 
-export default Signup;
+export default SignUpStep3;
