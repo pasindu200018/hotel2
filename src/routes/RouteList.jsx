@@ -42,11 +42,15 @@ import Error404 from "../views/Authentication/Error404/Error404";
 import Error503 from "../views/Authentication/Error503/Error503";
 import ChatPopup from "../views/ChatPopup/DirectMessage";
 import ChatBot from "../views/ChatPopup/ChatBot";
+import SignUpStep1 from "../views/SignUp/SignUpStep1";
 
 
 export const routes = [
 
     { path: 'dashboard', exact: true, component: Dashboard },
+
+
+    
     //Apps
     { path: 'apps/chat/chats', exact: true, component: Chats },
     { path: 'apps/chat/chat-groups', exact: true, component: ChatGroups },
@@ -85,6 +89,12 @@ export const routes = [
 ]
 
 export const authRoutes = [
+
+    //Costume Routes Pages(Cypso Team)
+
+    // {path: '/signup', exact: true, component: SignUpStep1},
+
+
     { path: '/login', exact: true, component: Login },
     { path: '/login-simple', exact: true, component: LoginSimple },
     { path: '/login-classic', exact: true, component: LoginClassic },
@@ -94,4 +104,6 @@ export const authRoutes = [
     { path: '/lock-screen', exact: true, component: LockScreen },
     { path: '/reset-password', exact: true, component: ResetPassword },
     { path: '/error-503', exact: true, component: Error503 },
+
+
 ]

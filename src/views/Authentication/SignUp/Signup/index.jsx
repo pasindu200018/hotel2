@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Button, Card, Col, Container, Form, InputGroup, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CommanFooter1 from '../../CommanFooter1';
+import bgVideo from '../../../../assets/video/signupBg.mp4';
 
 //Images
 import logo from '../../../../assets/img/logo-light.png';
@@ -19,47 +20,8 @@ const Signup = (props) => {
             <div className="hk-pg-body py-0">
                 <Container fluid>
                     <Row className="auth-split">
-                        <Col xl={5} lg={6} md={5} className="d-md-block d-none bg-primary-dark-3 bg-opacity-85 position-relative">
-                            <img className="bg-img" src={signupBg} alt="bg-img" />
-                            <div className="auth-content py-8">
-                                <Row>
-                                    <Col xxl={8} className="mx-auto">
-                                        <div className="text-center">
-                                            <h3 className="text-white mb-2">High quality Bootstrap template for your next web project.</h3>
-                                            <p className="text-white">Start your <u>14 Days FREE</u> trial.</p>
-                                        </div>
-                                        <ul className="list-icon text-white mt-4">
-                                            <li className="mb-1">
-                                                <p><i className="ri-check-fill" /><span>There are many variations of passages of Lorem Ipsum available, in some form, by injected humour</span></p>
-                                            </li>
-                                            <li className="mb-1">
-                                                <p><i className="ri-check-fill" /><span>There are many variations of passages of Lorem Ipsum available, in some form, by injected humour</span></p>
-                                            </li>
-                                        </ul>
-                                        <Row className="gx-3 mt-7">
-                                            <Col lg={6}>
-                                                <Card className="card-shadow">
-                                                    <Card.Img variant="top" src={slide1} alt="Card img cap" />
-                                                    <Card.Body>
-                                                        <Card.Title className="text-uppercase">Help Centre</Card.Title>
-                                                        <Card.Text>This is a wider card with supporting text.</Card.Text>
-                                                    </Card.Body>
-                                                </Card>
-                                            </Col>
-                                            <Col lg={6}>
-                                                <Card className="card-shadow">
-                                                    <Card.Img variant="top" src={slide2} alt="Card img cap" />
-                                                    <Card.Body>
-                                                        <Card.Title className="text-uppercase">Research Centre</Card.Title>
-                                                        <Card.Text>This is a wider card with supporting text.</Card.Text>
-                                                    </Card.Body>
-                                                </Card>
-                                            </Col>
-                                        </Row>
-                                    </Col>
-                                </Row>
-                            </div>
-                            <p className="p-xs text-white credit-text opacity-55">All illustration are powered by <a href="https://icons8.com/ouch/" target="_blank" className="link-white" rel="noreferrer"><u>OUCH</u></a></p>
+                        <Col xl={5} lg={6} md={5} className=" p-0 d-md-block d-none bg-primary-dark-3 bg-opacity-85 position-relative overflow-hidden">
+                            <video className=" overflow-hidden" style={{width: '1700px', height: '100%'}} autoPlay loop muted src={bgVideo}  />
                         </Col>
                         <Col xl={7} lg={6} md={7} sm={10} className="position-relative mx-auto">
                             <div className="auth-content flex-column pt-8 pb-md-8 pb-13">
