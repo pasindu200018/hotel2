@@ -29,6 +29,7 @@ import TaskList from "../views/Todo/Tasklist";
 import Profile from "../views/Profiles/Profile";
 import EditProfile from "../views/Profiles/EditProfile";
 import Account from "../views/Profiles/Account";
+
 //Auth
 import Login from "../views/Authentication/LogIn/Login/Login";
 import LoginSimple from "../views/Authentication/LogIn/LoginSimple";
@@ -43,6 +44,7 @@ import Error503 from "../views/Authentication/Error503/Error503";
 import ChatPopup from "../views/ChatPopup/DirectMessage";
 import ChatBot from "../views/ChatPopup/ChatBot";
 
+
 import SignUpStep1 from "../views/SignUp/SignUpStep1";
 import SignUpStep2 from "../views/Authentication/SignUp/SignUpStep2";
 import SignUpStep3 from "../views/Authentication/SignUp/SignUpStep3";
@@ -50,9 +52,27 @@ import SignUpStep4 from "../views/Authentication/SignUp/SignUpStep4";
 import SignUpStep5 from "../views/Authentication/SignUp/SignUpStep5";
 import SignUpStep6 from "../views/Authentication/SignUp/SignUpStep6";
 
+import PropertyContract from "../views/PropertyContract"
+import PoliciesAndSettings from "../views/PoliciesAndSettings"
+import PropertyAmenities from "../views/PropertyAmenities"
+import Commissions from "../views/Commissions"
+import PropertiesAndRates from "../views/PropertiesAndRates"
+import Taxes from "../views/Taxes"
+import Photos from "../views/Photos"
+import Review from "../views/Review"
+
 export const routes = [
 
     { path: 'dashboard', exact: true, component: Dashboard },
+    { path: 'property-contract', exact: true, component: PropertyContract },
+    { path: 'policies-and-settings', exact: true, component: PoliciesAndSettings },
+    { path: 'property-amenities', exact: true, component: PropertyAmenities },
+    { path: 'commissions', exact: true, component: Commissions },
+    { path: 'properties-and-rates', exact: true, component: PropertiesAndRates },
+    { path: 'taxes', exact: true, component: Taxes },
+    { path: 'photos', exact: true, component: Photos },
+    { path: 'review', exact: true, component: Review },
+  
 
 
     
