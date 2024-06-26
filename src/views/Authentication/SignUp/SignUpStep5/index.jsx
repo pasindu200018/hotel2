@@ -20,6 +20,7 @@ const SignUpStep5 = (props) => {
             <div className="hk-pg-body py-0">
                 <Container fluid>
                     <Row className="auth-split">
+                        <SimpleHeader />
                         <Col xl={7} lg={6} md={7} sm={10} className="position-relative mx-auto">
                             <div className="auth-content flex-column pt-8 pb-md-8 pb-13">
                                 <Form className="w-100">
