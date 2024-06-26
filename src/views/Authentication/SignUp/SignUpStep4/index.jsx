@@ -17,6 +17,7 @@ const Signup = (props) => {
             <div className="hk-pg-body py-0">
                 <Container fluid>
                     <Row className="auth-split">
+                        <SimpleHeader />
                         <Col xl={7} lg={6} md={7} sm={10} className="position-relative mx-auto">
                             <div className="auth-content flex-column pt-8 pb-md-8 pb-13">
                                 <Form className="w-100">
@@ -28,7 +29,7 @@ const Signup = (props) => {
                                             <Row className="gx-3">
                                                 <Col lg={12} as={Form.Group} className="mb-3">
                                                     <Form.Label>Address</Form.Label>
-                                                    <Form.Control onChange={(e)=>{setaddress(e.target.value);console.log(address)}} placeholder="Enter address" type="text" />
+                                                    <Form.Control onChange={(e) => { setaddress(e.target.value); console.log(address) }} placeholder="Enter address" type="text" />
                                                 </Col>
                                             </Row>
                                             <Button variant='dark' className="btn-rounded  btn-block" as={Link} to="signup-step-5" >Next</Button>
