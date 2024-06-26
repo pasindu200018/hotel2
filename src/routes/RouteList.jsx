@@ -42,6 +42,7 @@ import Error404 from "../views/Authentication/Error404/Error404";
 import Error503 from "../views/Authentication/Error503/Error503";
 import ChatPopup from "../views/ChatPopup/DirectMessage";
 import ChatBot from "../views/ChatPopup/ChatBot";
+import Welcome from "../views/Authentication/Welcome";
 
 import SignUpStep1 from "../views/SignUp/SignUpStep1";
 import SignUpStep2 from "../views/Authentication/SignUp/SignUpStep2";
@@ -103,6 +104,7 @@ export const authRoutes = [
     { path: '/signup-step-4', exact: true, component: SignUpStep4 },
     { path: '/signup-step-5', exact: true, component: SignUpStep5 },
     { path: '/signup-step-6', exact: true, component: SignUpStep6 },
+    { path: '/welcome', exact: true, component: Welcome },
 
     //Coustom Routes Pages(Cypso Team) End
 
