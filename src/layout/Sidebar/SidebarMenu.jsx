@@ -14,6 +14,52 @@ export const SidebarMenu = [
         ]
     },
     {
+        group: 'Steps',
+        contents: [
+            {
+                name: 'Property Contract',
+                icon: <Icons.Template />,
+                path: '/property-contract',
+            },
+            {
+                name: 'Policies and settings',
+                icon: <Icons.Template />,
+                path: '/policies-and-settings',
+            },
+            {
+                name: 'Property amenities',
+                icon: <Icons.Template />,
+                path: '/property-amenities',
+            },
+            {
+                name: 'Commissions',
+                icon: <Icons.Template />,
+                path: '/commissions',
+            },
+            {
+                name: 'Properties and rates',  
+                icon: <Icons.Template />,
+                path: '/properties-and-rates',
+            },
+            {
+                name: 'Taxes',
+                icon: <Icons.Template />,
+                path: '/taxes',
+            },
+            {
+                name: 'Photos',
+                icon: <Icons.Template />,
+                path: '/photos',
+            },
+            {
+                name: 'Review',
+                icon: <Icons.Template />,
+                path: '/review', 
+            },
+        ]
+    },
+    
+    {
         group: 'Apps',
         contents: [
             {
