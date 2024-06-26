@@ -37,7 +37,7 @@ const MainRoutes = () => {
                                         />) : (null)
                                 })
                             }
-                            <Redirect exact from='/' to='/dashboard' />
+                            <Redirect exact from='/' to='/auth/signup' />
                         </Switch>
                     </LayoutClassic>
                 </Suspense>

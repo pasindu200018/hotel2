@@ -8,6 +8,7 @@ import bgVideo from '../../../../assets/video/signupBg.mp4';
 
 //Images
 import logo from '../../../../assets/img/logo-light.png';
+import SimpleHeader from '../../SimpleHeader';
 
 const Signup = (props) => {
     const [address, setaddress] = useState("");

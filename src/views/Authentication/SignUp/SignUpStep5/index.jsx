@@ -5,6 +5,7 @@ import { Button, Card, Col, Container, Form, InputGroup, Row, Stack } from 'reac
 import { Link } from 'react-router-dom';
 import CommanFooter1 from '../../CommanFooter1';
 import '../../../../styles/css/signup.css'
+import SimpleHeader from '../../SimpleHeader';
 
 const SignUpStep5 = (props) => {
     const [address, setaddress] = useState("");
