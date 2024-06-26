@@ -12,7 +12,7 @@ function App() {
         <BrowserRouter >
           <ScrollToTop>
             <Switch>
-              <Redirect exact from="/" to="/dashboard" />
+              <Redirect exact from="/" to="/auth/signup" />
               {/* Auth */}
               <Route path="/auth" render={(props) => <AuthRoutes {...props} />} />
               {/* Layouts */}

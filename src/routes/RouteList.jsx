@@ -45,7 +45,7 @@ import ChatPopup from "../views/ChatPopup/DirectMessage";
 import ChatBot from "../views/ChatPopup/ChatBot";
 
 
-import SignUpStep1 from "../views/SignUp/SignUpStep1";
+
 import SignUpStep2 from "../views/Authentication/SignUp/SignUpStep2";
 import SignUpStep3 from "../views/Authentication/SignUp/SignUpStep3";
 import SignUpStep4 from "../views/Authentication/SignUp/SignUpStep4";
@@ -72,8 +72,6 @@ export const routes = [
     { path: 'taxes', exact: true, component: Taxes },
     { path: 'photos', exact: true, component: Photos },
     { path: 'review', exact: true, component: Review },
-  
-
 
     
     //Apps

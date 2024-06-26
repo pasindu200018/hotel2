@@ -92,7 +92,7 @@ const Signup = (props) => {
                                                         label="No" />
                                                 </Form.Group>
 
-                                                <Button variant='dark' className="btn-rounded  btn-block mb-3" as={Link} to="login" >Next</Button>
+                                                <Button variant='dark' className="btn-rounded  btn-block mb-3" as={Link} to="/dashboard" >Next</Button>
                                             </Stack>
                                         </Col>
                                     </Row>
