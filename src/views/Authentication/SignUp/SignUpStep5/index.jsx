@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import CommanFooter1 from '../../CommanFooter1';
 import '../../../../styles/css/signup.css'
 
-const Signup = (props) => {
+const SignUpStep5 = (props) => {
     const [address, setaddress] = useState("");
     const [propertyName, setPropertyName] = useState("");
     const [city, setcity] = useState("");
@@ -65,7 +65,7 @@ const Signup = (props) => {
                                                 <p className='fw-bolder text-black'>Zip code</p>
                                                 <Form.Control onChange={(e) => { setzipCode(e.target.value) }} placeholder="Enter zip code" type="text" />
 
-                                                <Button variant='dark' className="btn-rounded  btn-block mb-3" as={Link} to="login" >Next</Button>
+                                                <Button variant='dark' className="btn-rounded  btn-block mb-3" as={Link} to="signup-step-6" >Next</Button>
                                             </Stack>
                                         </Col>
                                     </Row>
@@ -82,4 +82,4 @@ const Signup = (props) => {
     )
 }
 
-export default Signup
+export default SignUpStep5

@@ -76,7 +76,7 @@ const SignUpStep3 = (props) => {
                         variant="dark"
                         className="btn-rounded  btn-block mt-4"
                         as={Link}
-                        to="login"
+                        to="signup-step-4"
                       >
                         Create account
                       </Button>

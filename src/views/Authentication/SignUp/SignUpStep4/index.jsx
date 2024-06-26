@@ -31,7 +31,7 @@ const Signup = (props) => {
                                                     <Form.Control onChange={(e)=>{setaddress(e.target.value);console.log(address)}} placeholder="Enter address" type="text" />
                                                 </Col>
                                             </Row>
-                                            <Button variant='dark' className="btn-rounded  btn-block" as={Link} to="login" >Next</Button>
+                                            <Button variant='dark' className="btn-rounded  btn-block" as={Link} to="signup-step-5" >Next</Button>
                                         </Col>
                                     </Row>
                                 </Form>
