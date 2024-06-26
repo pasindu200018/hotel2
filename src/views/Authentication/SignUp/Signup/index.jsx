@@ -23,6 +23,7 @@ import slide2 from "../../../../assets/img/slide2.jpg";
 const Signup = (props) => {
   const [showPassword, setShowPassword] = useState(false);
 
+
   return (
     <div className="hk-pg-wrapper py-0">
       <div className="hk-pg-body py-0">
@@ -53,6 +54,7 @@ const Signup = (props) => {
                     />
                   </Link>
                 </div>
+                
                 <Form className="w-100">
                   <Row>
                     <Col xxl={5} xl={7} lg={10} className="mx-auto">
