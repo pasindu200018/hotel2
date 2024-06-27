@@ -34,7 +34,6 @@ import Account from "../views/Profiles/Account";
 import Login from "../views/Authentication/LogIn/Login/Login";
 import LoginSimple from "../views/Authentication/LogIn/LoginSimple";
 import LoginClassic from "../views/Authentication/LogIn/LoginClassic";
-import Signup from "../views/Authentication/SignUp/Signup";
 import SignUpSimple from "../views/Authentication/SignUp/SignupSimple";
 import SignupClassic from "../views/Authentication/SignUp/SignupClassic";
 import LockScreen from "../views/Authentication/LockScreen";
@@ -46,9 +45,7 @@ import ChatBot from "../views/ChatPopup/ChatBot";
 import Welcome from "../views/Authentication/Welcome";
 
 
-
-import SignUpStep2 from "../views/Authentication/SignUp/SignUpStep2";
-import SignUpStep3 from "../views/Authentication/SignUp/SignUpStep3";
+import SignUpindex from "../views/Authentication/SignUp";
 import SignUpStep4 from "../views/Authentication/SignUp/SignUpStep4";
 import SignUpStep5 from "../views/Authentication/SignUp/SignUpStep5";
 import SignUpStep6 from "../views/Authentication/SignUp/SignUpStep6";
@@ -116,9 +113,7 @@ export const authRoutes = [
 
     //Coustom Routes Pages(Cypso Team) start
 
-    { path: '/signup', exact: true, component: Signup },
-    { path: '/signup-step-2', exact: true, component: SignUpStep2 },
-    { path: '/signup-step-3', exact: true, component: SignUpStep3 },
+    { path: '/signup', exact: true, component: SignUpindex },
     { path: '/signup-step-4', exact: true, component: SignUpStep4 },
     { path: '/signup-step-5', exact: true, component: SignUpStep5 },
     { path: '/signup-step-6', exact: true, component: SignUpStep6 },
