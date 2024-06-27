@@ -25,7 +25,7 @@ const Index = () => {
     })
 
     const [step3, setstep3] = useState({
-        password:"",
+        password:"dd",
     })
 
     const updateStep = (e) => {
@@ -82,6 +82,7 @@ const Index = () => {
                                         />
                                     </Link>
                                 </div>
+                                {step3.password}
                                 {signUpStep == 1 ? <Signup className="smooth" setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
                                 {signUpStep == 2 ? <SignUpStep2 className="smooth" setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
                                 {signUpStep == 3 ? <SignUpStep3 className="smooth" setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
