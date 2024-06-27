@@ -11,6 +11,7 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useValidateEmailMutation } from "../../../../redux/reducer/api/authSlice";
+import '../style.css'
 
 const Signup = (props) => {
   const [validateEmail, { isLoading, isError, error, data }] =
@@ -29,7 +30,7 @@ const Signup = (props) => {
 
 
   return (
-    <Form className="w-100">
+    <Form className="w-100 smooth">
       <Row>
         <Col xxl={5} xl={7} lg={10} className="mx-auto">
           <h4 className=" mb-4 fw-bold">Create your Parnter account</h4>
