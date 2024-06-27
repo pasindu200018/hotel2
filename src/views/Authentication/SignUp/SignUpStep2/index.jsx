@@ -58,7 +58,7 @@ const SignUpStep2 = (props) => {
                 <Form className="w-100">
                   <Row>
                     <Col xxl={5} xl={7} lg={10} className="mx-auto">
-                      <h4 className=" mb-4 fw-bold">
+                      <h4 className=" mb-4 fw-bold scale-vf-font">
                         Authorized person contact details
                       </h4>
                       <h6 className=" mb-4">

@@ -1,5 +1,13 @@
 import * as Icons from 'tabler-icons-react';
 import HkBadge from '../../components/@hk-badge/@hk-badge';
+import PropertyContract from '../../assets/img/sidebar-icons/property-contract.png';
+import PoliciesAndSettings from '../../assets/img/sidebar-icons/policies-settings.png';
+import PropertyAmenities from '../../assets/img/sidebar-icons/property-amenities.png';
+import Commissions from '../../assets/img/sidebar-icons/commissions.png';
+import PropertiesAndRates from '../../assets/img/sidebar-icons/properties-rates.png';
+import Taxes from '../../assets/img/sidebar-icons/taxes.png';
+import Photos from '../../assets/img/sidebar-icons/photos.png';
+import Review from '../../assets/img/sidebar-icons/review.png';
 
 export const SidebarMenu = [
     {
@@ -18,42 +26,42 @@ export const SidebarMenu = [
         contents: [
             {
                 name: 'Property Contract',
-                icon: <Icons.Template />,
+                icon: <img src={PropertyContract} alt="" />,
                 path: '/property-contract',
             },
             {
                 name: 'Policies and settings',
-                icon: <Icons.Template />,
+                icon: <img src={PoliciesAndSettings} alt="" />,
                 path: '/policies-and-settings',
             },
             {
                 name: 'Property amenities',
-                icon: <Icons.Template />,
+                icon: <img src={PropertyAmenities} alt="" />,
                 path: '/property-amenities',
             },
             {
                 name: 'Commissions',
-                icon: <Icons.Template />,
+                icon: <img src={Commissions} alt="" />,
                 path: '/commissions',
             },
             {
                 name: 'Properties and rates',  
-                icon: <Icons.Template />,
+                icon: <img src={PropertiesAndRates} alt="" />,
                 path: '/properties-and-rates',
             },
             {
                 name: 'Taxes',
-                icon: <Icons.Template />,
+                icon: <img src={Taxes} alt="" />,
                 path: '/taxes',
             },
             {
                 name: 'Photos',
-                icon: <Icons.Template />,
+                icon: <img src={Photos} alt="" />,
                 path: '/photos',
             },
             {
                 name: 'Review',
-                icon: <Icons.Template />,
+                icon: <img src={Review} alt="" />,
                 path: '/review', 
             },
         ]

@@ -25,7 +25,7 @@ const Signup = (props) => {
                                     <Row>
                                         <Col xxl={5} xl={7} lg={10} className="mx-auto form-step">
                                             <span className='fs-7 text-light'>Step 1 of 2</span>
-                                            <h4 className="my-3">Where is your property located?</h4>
+                                            <h4 className="my-3 scale-vf-font">Where is your property located?</h4>
                                             <p className='mb-3'>Start with your property name, like Hilton Dubai. This will make it easier to find your address.</p>
                                             <Row className="gx-3">
                                                 <Col lg={12} as={Form.Group} className="mb-3">

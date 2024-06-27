@@ -4,6 +4,7 @@ import AuthRoutes from './routes/AuthRoutes';
 import AppRoutes from './routes/AppRoutes'
 import "bootstrap/js/src/collapse";
 import ScrollToTop from './utils/ScrollToTop';
+import "./index.css";
 
 function App() {
   return (

@@ -30,7 +30,7 @@ const Signup = (props) => {
                                         <Col xxl={7} xl={7} lg={10} className="mx-auto " gap={5}>
                                             <Stack gap={3} className='form-step'>
                                                 <span className='fs-7 text-light'>Step 2 of 2</span>
-                                                <h4 className="">Tell us a little about your property</h4>
+                                                <h4 className="scale-vf-font">Tell us a little about your property</h4>
                                                 <p className='fw-bolder text-black'>Property name</p>
                                                 <Form.Group className='inp-Box'>
                                                     <Form.Label>Enter your property name</Form.Label>
