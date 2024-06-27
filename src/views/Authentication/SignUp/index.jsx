@@ -11,13 +11,14 @@ import SignUpStep3 from './SignUpStep3';
 //Images
 import logo from "../../../assets/img/logo-light.png";
 import bgVideo from "../../../assets/video/signupBg.mp4";
-import { Password } from 'tabler-icons-react';
+
 
 const Index = () => {
     const [signUpStep, setSignUpStep] = useState(1);
+    
 
     const [step1, setstep1] = useState({
-        email: "", agre: false,
+        email: "" , agre: ""
     })
 
     const [step2, setstep2] = useState({
@@ -27,8 +28,8 @@ const Index = () => {
     const [step3, setstep3] = useState({
         password:"dd",
     })
-
     const updateStep = (e) => {
+
         switch (signUpStep) {
             case 1:
                 setstep1({

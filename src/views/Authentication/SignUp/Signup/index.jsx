@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Card,
@@ -7,11 +7,26 @@ import {
   Form,
   InputGroup,
   Row,
+  Spinner,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useValidateEmailMutation } from "../../../../redux/reducer/api/authSlice";
 
 const Signup = (props) => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [validateEmail, { isLoading, isError, error, data }] =
+    useValidateEmailMutation();
+  const [email, setEmail] = useState("");
+
+  const checkEmail = async () => {
+    await validateEmail({ email });
+    if (data) {
+      console.log(data);
+    }
+    if (isError) {
+      console.log(error);
+    }
+  };
+
 
   return (
     <Form className="w-100">
@@ -22,47 +37,61 @@ const Signup = (props) => {
             Create an account to list and manage your property.
           </h6>
           <Form.Label>Email</Form.Label>
-          <Form.Control
+         
+          <InputGroup className="mt-3">
+            <span className="input-affix-wrapper">
+            <Form.Control
             name="email"
             placeholder="Enter your email id"
             type="text"
-            onChange={(e)=>props.updateStep(e)}
-          />
+            onChange={(e) => {
+              props.updateStep(e), setEmail(e.target.value);
+            }}
+            />
+            {isLoading && (
+                <span className="input-suffix"> <Spinner animation="grow" size="sm" /></span>
+            )}
+            </span>
+        </InputGroup>
+        
+        {(data) && (
+          <h6 className={` ${data?.status ? "text-success" : "text-danger"} `}>{`${data?.message}`}</h6>
+        )}
+
+        
           <Form.Check id="logged_in" className="form-check-sm mt-3">
             <Form.Check.Input
               name="agre"
               type="checkbox"
               className="bg-dark"
               defaultChecked
-              onChange={(e)=>{
-                e.target.value=e.target.checked;
+              onChange={(e) => {
+                e.target.value = e.target.checked;
                 props.updateStep(e);
               }}
             />
             <Form.Check.Label className="text-muted fs-7 text-dark">
-              By creating an account you specify that you have read
-              and agree with our <Link to="#">Tearms of use</Link>{" "}
-              and <Link to="#">Privacy policy</Link>. We may keep
-              you inform about latest updates through our default{" "}
+              By creating an account you specify that you have read and agree
+              with our <Link to="#">Tearms of use</Link> and{" "}
+              <Link to="#">Privacy policy</Link>. We may keep you inform about
+              latest updates through our default{" "}
               <Link to="#">notification settings</Link>
             </Form.Check.Label>
           </Form.Check>
 
           <Button
-            onClick={() => props.setSignUpStep(2)}
+            onClick={checkEmail}
             variant="dark"
             className="btn-rounded btn-uppercase btn-block mt-4"
-            as={Link}
-
+            // as={Link}
           >
             Continue
           </Button>
 
           <div className="title-sm title-wth-divider divider-center my-4"></div>
           <p className="text-dark">
-            Do you have questions about your property or the
-            extranet? Visit Partner Help or ask another question on
-            the patner Community
+            Do you have questions about your property or the extranet? Visit
+            Partner Help or ask another question on the patner Community
           </p>
           <Button
             variant="outline-dark"
