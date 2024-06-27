@@ -83,9 +83,9 @@ const Index = () => {
                                     </Link>
                                 </div>
                                 {step3.password}
-                                {signUpStep == 1 ? <Signup setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
-                                {signUpStep == 2 ? <SignUpStep2 setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
-                                {signUpStep == 3 ? <SignUpStep3 setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
+                                {signUpStep == 1 ? <Signup className="smooth" setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
+                                {signUpStep == 2 ? <SignUpStep2 className="smooth" setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
+                                {signUpStep == 3 ? <SignUpStep3 className="smooth" setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
                             </div>
                             {/* Page Footer */}
                             <CommanFooter1 />

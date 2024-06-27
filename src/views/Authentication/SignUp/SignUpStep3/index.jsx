@@ -9,11 +9,12 @@ import {
   Row,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import '../style.css'
 
 const SignUpStep3 = (props) => {
 
   return (
-    <Form className="w-100">
+    <Form className="w-100 smooth">
       <Row>
         <Col xxl={5} xl={7} lg={10} className="mx-auto">
           <h4 className=" mb-4 fw-bold">Create password</h4>
