@@ -16,7 +16,7 @@ const SignUpStep3 = (props) => {
     <Form className="w-100">
       <Row>
         <Col xxl={5} xl={7} lg={10} className="mx-auto">
-          <h4 className=" mb-4 fw-bold">Create password</h4>
+          <h4 className=" mb-4 fw-bold font-scale-vf">Create password</h4>
           <h6 className=" mb-4">
             Use a minimum of 10 characters, including uppercare
             letters, lowercase letters and numbers.

@@ -28,7 +28,7 @@ function Welcome() {
                 className="d-flex justify-content-evenly flex-column gap-3"
                 style={{ maxWidth: "600px" }}
               >
-                <p className="text-black fw-bolder fs-2">
+                <p className="text-black fw-bolder fs-2 font-scale-vf">
                   Welcome to LiveInHotel
                 </p>
                 <p className="fw-medium">

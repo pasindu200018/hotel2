@@ -29,7 +29,7 @@ const SignUpStep5 = (props) => {
                                         <Col xxl={7} xl={7} lg={10} className="mx-auto " gap={5}>
                                             <Stack gap={3} className='form-step'>
                                                 <span className='fs-7 text-light'>Step 1 of 2</span>
-                                                <h4 className="">Let's start with the basics</h4>
+                                                <h4 className="font-scale-vf">Let's start with the basics</h4>
                                                 <p className='fw-bolder text-black'>Name of property</p>
 
                                                 <p>Please provide the official name of your property, for example the one you use on your own website.</p>
