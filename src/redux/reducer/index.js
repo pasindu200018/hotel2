@@ -6,6 +6,7 @@ import EmailReducer from './Email';
 import Theme from './Theme';
 import ToDoReducer from './ToDo';
 import { apiSlice } from './api/apiSlice';
+import authSlice from './authSlice';
 
 const reducers = combineReducers({
     theme: Theme,
@@ -13,6 +14,7 @@ const reducers = combineReducers({
     emailReducer: EmailReducer,
     chatPopupReducer: ChatPopupReducer,
     toDoReducer: ToDoReducer,
+    auth: authSlice,
     [apiSlice.reducerPath]: apiSlice.reducer,
 });
 

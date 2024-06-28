@@ -17,14 +17,17 @@ const Signup = (props) => {
   const [validateEmail, { isLoading, isError, error, data }] = useValidateEmailMutation();
 
   let email = props.step.email;
-  const checkEmail = async () => { await validateEmail({ email }) };
+
+  const checkEmail = async () => { 
+    const res = await validateEmail({ email })
+  };
 
   const chackFontEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
 
-  { data?.status && props.setSignUpStep(2) }
+  {data?.status && props.setSignUpStep(2)}
 
   return (
     <Form className="w-100 smooth">
@@ -96,7 +99,7 @@ const Signup = (props) => {
             variant="outline-dark"
             className="btn-outline btn-rounded  btn-block my-5"
             as={Link}
-            to="login"
+            // to="login"
           >
             Sign in
           </Button>
