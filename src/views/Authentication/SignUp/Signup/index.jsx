@@ -30,7 +30,7 @@ const Signup = (props) => {
     <Form className="w-100 smooth">
       <Row>
         <Col xxl={5} xl={7} lg={10} className="mx-auto">
-          <h4 className=" mb-4 fw-bold">Create your Parnter account</h4>
+          <h4 className=" mb-4 fw-bold font-scale-vf">Create your Parnter account</h4>
           <h6 className=" mb-4">
             Create an account to list and manage your property.
           </h6>
