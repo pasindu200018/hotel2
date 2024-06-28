@@ -97,7 +97,8 @@ const Signup = (props) => {
             variant="outline-dark"
             className="btn-outline btn-rounded  btn-block my-5"
             as={Link}
-            to="login"
+            // to="login"
+            onClick={() => props.setSignUpStep(2)}
           >
             Sign in
           </Button>
