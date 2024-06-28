@@ -17,6 +17,7 @@ const Signup = (props) => {
   const [validateEmail, { isLoading, isError, error, data }] = useValidateEmailMutation();
 
   let email = props.step.email;
+
   const checkEmail = async () => { await validateEmail({ email }) };
 
   const chackFontEmail = (email) => {

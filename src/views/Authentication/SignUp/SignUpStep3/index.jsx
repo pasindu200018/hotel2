@@ -37,10 +37,11 @@ const SignUpStep3 = (props) => {
           />
 
           <Button
-            onClick={() => props.setSignUpStep(3)}
+            
             variant="dark"
             className="btn-rounded  btn-block mt-4"
             as={Link}
+            to="signup-step-4"
           >
             Create account
           </Button>

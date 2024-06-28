@@ -11,12 +11,16 @@ import SignUpStep3 from './SignUpStep3';
 //Images
 import logo from "../../../assets/img/logo-light.png";
 import bgVideo from "../../../assets/video/signupBg.mp4";
+import { useRegisterMutation } from '../../../redux/reducer/api/authSlice';
 
 
 const Index = () => {
     const [signUpStep, setSignUpStep] = useState(1);
-    
+    const [register , { isLoading, isError, error, data }] = useRegisterMutation()
 
+    
+    
+    
     const [step1, setstep1] = useState({
         email: "" , agre: "true"
     })
@@ -24,13 +28,17 @@ const Index = () => {
     const [step2, setstep2] = useState({
         fname: "", lname: "", ccode: "", mobile: "",
     })
-
+    
     const [step3, setstep3] = useState({
         password:"",
     })
     
-    const updateStep = (e) => {
+    // const userRegister = async () => {
+    //     await register({email:step1.email, password:step3.password, firstName:step2.fname, lastname:step2.lname,  mobile:step2.mobile,  countryCode:step2.ccode})
+    // }
 
+
+    const updateStep = (e) => {
         switch (signUpStep) {
             case 1:
                 setstep1({
