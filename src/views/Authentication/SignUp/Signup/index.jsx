@@ -11,25 +11,23 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useValidateEmailMutation } from "../../../../redux/reducer/api/authSlice";
+import '../style.css'
 
 const Signup = (props) => {
-  const [validateEmail, { isLoading, isError, error, data }] =
-    useValidateEmailMutation();
-  const [email, setEmail] = useState("");
+  const [validateEmail, { isLoading, isError, error, data }] = useValidateEmailMutation();
 
-  const checkEmail = async () => {
-    await validateEmail({ email });
-    if (data) {
-      console.log(data);
-    }
-    if (isError) {
-      console.log(error);
-    }
-  };
+  let email = props.step.email;
+  const checkEmail = async () => { await validateEmail({ email }) };
 
+  const chackFontEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  { data?.status && props.setSignUpStep(2) }
 
   return (
-    <Form className="w-100">
+    <Form className="w-100 smooth">
       <Row>
         <Col xxl={5} xl={7} lg={10} className="mx-auto">
           <h4 className=" mb-4 fw-bold">Create your Parnter account</h4>
@@ -37,28 +35,28 @@ const Signup = (props) => {
             Create an account to list and manage your property.
           </h6>
           <Form.Label>Email</Form.Label>
-         
+
           <InputGroup className="mt-3">
             <span className="input-affix-wrapper">
-            <Form.Control
-            name="email"
-            placeholder="Enter your email id"
-            type="text"
-            onChange={(e) => {
-              props.updateStep(e), setEmail(e.target.value);
-            }}
-            />
-            {isLoading && (
-                <span className="input-suffix"> <Spinner animation="grow" size="sm" /></span>
-            )}
+              <Form.Control
+                name="email"
+                placeholder="Enter your email id"
+                type="text"
+                onChange={(e) => {
+                  props.updateStep(e);
+                }}
+              />
+              {isLoading && (
+                <span className="input-suffix"> <Spinner animation="border" size="sm" /></span>
+              )}
             </span>
-        </InputGroup>
-        
-        {(data) && (
-          <h6 className={` ${data?.status ? "text-success" : "text-danger"} `}>{`${data?.message}`}</h6>
-        )}
+          </InputGroup>
 
-        
+          {(data) && (
+            <span className={` ${data?.status ? "text-success" : "text-danger"} ` + "m-1 fs-7"}>{`${data?.message}`}</span>
+          )}
+
+
           <Form.Check id="logged_in" className="form-check-sm mt-3">
             <Form.Check.Input
               name="agre"
@@ -83,7 +81,8 @@ const Signup = (props) => {
             onClick={checkEmail}
             variant="dark"
             className="btn-rounded btn-uppercase btn-block mt-4"
-            // as={Link}
+            disabled={chackFontEmail(props.step.email) && (props.step.agre == 'true') ? false : true}
+
           >
             Continue
           </Button>
