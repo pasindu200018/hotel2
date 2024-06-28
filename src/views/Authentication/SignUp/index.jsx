@@ -18,7 +18,7 @@ const Index = () => {
     
 
     const [step1, setstep1] = useState({
-        email: "" , agre: ""
+        email: "" , agre: "true"
     })
 
     const [step2, setstep2] = useState({
@@ -26,8 +26,9 @@ const Index = () => {
     })
 
     const [step3, setstep3] = useState({
-        password:"dd",
+        password:"",
     })
+    
     const updateStep = (e) => {
 
         switch (signUpStep) {
@@ -83,10 +84,9 @@ const Index = () => {
                                         />
                                     </Link>
                                 </div>
-                                {step3.password}
-                                {signUpStep == 1 ? <Signup setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
-                                {signUpStep == 2 ? <SignUpStep2 setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
-                                {signUpStep == 3 ? <SignUpStep3 setSignUpStep={setSignUpStep} updateStep={updateStep} /> : null}
+                                {signUpStep == 1 ? <Signup setSignUpStep={setSignUpStep} step={step1} updateStep={updateStep} /> : null}
+                                {signUpStep == 2 ? <SignUpStep2 setSignUpStep={setSignUpStep} step={step2} updateStep={updateStep} /> : null}
+                                {signUpStep == 3 ? <SignUpStep3 setSignUpStep={setSignUpStep} step={step3} updateStep={updateStep} /> : null}
                             </div>
                             {/* Page Footer */}
                             <CommanFooter1 />
