@@ -7,11 +7,29 @@ import {
   Form,
   InputGroup,
   Row,
+  Spinner,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import '../style.css'
 
 const SignUpStep3 = (props) => {
+  const [error, setError] = useState(false);
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+
+  const confirmPasswordHandler = () => {
+    if(password === confirmPassword){
+      props.userRegister()
+      setError(false)
+    }else{
+      setError(true)
+    }
+  };
+
+  
+
+
 
   return (
     <Form className="w-100 smooth">
@@ -27,23 +45,31 @@ const SignUpStep3 = (props) => {
             name="password"
             placeholder="Enter your password"
             type="password"
-            onChange={(e) => props.updateStep(e)}
+            onChange={(e) => {props.updateStep(e),
+            setPassword(e.target.value)
+            }}
           />
           <Form.Label className="mt-4">Confirm password</Form.Label>
           <Form.Control
             name="chechPassword"
             placeholder="Confirm your password"
             type="password"
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
+         {error ? 
+            <span className={"text-danger m-1 fs-7"}>Password not matched</span> : null
+          }
+       
 
           <Button
             
             variant="dark"
             className="btn-rounded  btn-block mt-4"
             as={Link}
-            to="signup-step-4"
+            // to="signup-step-4"
+            onClick={()=>confirmPasswordHandler()}
           >
-            Create account
+            {props.isLoading ? "Loading..." : "Create account"}        
           </Button>
         </Col>
       </Row>
