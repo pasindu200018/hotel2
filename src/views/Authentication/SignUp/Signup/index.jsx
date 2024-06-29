@@ -12,6 +12,8 @@ import {
 import { Link } from "react-router-dom";
 import { useValidateEmailMutation } from "../../../../redux/reducer/api/authSlice";
 import '../style.css'
+import axios from "axios";
+
 
 const Signup = (props) => {
   const [validateEmail, { isLoading, isError, error, data }] = useValidateEmailMutation();
@@ -19,6 +21,9 @@ const Signup = (props) => {
   let email = props.step.email;
 
   const checkEmail = async () => { 
+    const resEamil = await axios.post('http://3.93.228.84/api/auth')
+
+
     const res = await validateEmail({ email })
   };
 
